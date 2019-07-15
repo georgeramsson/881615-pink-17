@@ -49,6 +49,105 @@
         </p>
       </section>
 
+      <section class="competition-form">
+        <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
+        <p class="competition-form__text">
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!Пожалуйста, заполните форму ниже:
+        </p>
+        <form class="competition-form__form user-form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="user-form__item user-info">
+            <ul class="user-info__list">
+              <li class="user-info__item">
+                <label for="user-surname">Фамилия:</label>
+                <input class="user-info__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию">
+              </li>
+              <li class="user-info__item">
+                <label for="user-name">Имя:</label>
+                <input class="user-info__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя">
+              </li>
+              <li class="user-info__item">
+                <label for="user-patronymic">Отчество:</label>
+                <input class="user-info__input" type="text" name="user-patronymic" id="user-patronymic" placeholder="Ну и отчество тоже">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="user-form__item user-achievements">
+            <legend class="user-achievements__heading">
+              Ваши безбашенные достижения в путешествии
+            </legend>
+            <ul class="user-achievements__list">
+              <li class="user-achievements__item">
+                <input class="user-achievements__checkbox" type="checkbox" name="shark" id="shark"  checked>
+                <label for="shark">Сделал селфи с акулой</label>
+              </li>
+              <li class="user-achievements__item">
+                <input class="user-achievements__checkbox" type="checkbox" name="beach" id="beach"  checked>
+                <label for="beach">Обгорел на пляже</label>
+              </li>
+              <li class="user-achievements__item">
+                <input class="user-achievements__checkbox" type="checkbox" name="chuck" id="chuck">
+                <label for="chuck">Видел Чака Норриса</label>
+              </li>
+              <li class="user-achievements__item">
+                <input class="user-achievements__checkbox" type="checkbox" name="souvenir" id="souvenir">
+                <label for="souvenir">Накупил сувениров</label>
+              </li>
+              <li class="user-achievements__item">
+                <input class="user-achievements__checkbox" type="checkbox" name="tower" id="tower" checked>
+                <label for="tower">Удержал башню</label>
+              </li>
+              <li class="user-achievements__item">
+                <input class="user-achievements__checkbox" type="checkbox" name="hotel" id="hotel">
+                <label for="hotel">Разгромил отель</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="user-form__item user-contacts">
+            <ul class="user-contacts__list">
+              <li class="user-contacts__item">
+                <label for="user-phone">Номер телефона:</label>
+                <input class="user-contacts__input" type="text" name="user-phone" id="user-phone" placeholder="Номер, пожалуйста">
+              </li>
+              <li class="user-contacts__item">
+                <label for="user-mail">Адрес почты:</label>
+                <input class="user-contacts__input" type="text" name="user-mail" id="user-mail" placeholder="Введите почту*">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="user-form__item user-os">
+            <legend class="user-os__heading">
+              С каким приложением путешествовали?
+            </legend>
+            <ul class="user-os__list">
+              <li class="user-os__item">
+                <input class="user-os__checkbox" type="checkbox" name="ios" id="ios"  checked>
+                <label for="ios">Pink для iOS</label>
+              </li>
+              <li class="user-os__item">
+                <input class="user-os__checkbox" type="checkbox" name="android" id="android">
+                <label for="android">Pink на Android</label>
+              </li>
+              <li class="user-os__item">
+                <input class="user-os__checkbox" type="checkbox" name="wp" id="wp">
+                <label for="wp">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="user-form__item user-text">
+            <legend class="user-text__heading">
+              Опишите свои эмоции
+            </legend>
+            <textarea class="user-text__review" name="user-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </fieldset>
+          <div class="user-form__send">
+            <button class="user-form__button" type="button">Отправить форму</button>
+          </div>
+          <div class="user-form__note">
+            * — обязательные поля
+          </div>
+        </form>
+      </section>
+
     </main>
 
     <footer class="page-footer">
