@@ -131,29 +131,76 @@
         <div class="price__wrapper slider">
           <h2 class="visually-hidden">Наши цены</h2>
           <table class="price__list slider__list">
-            <tbody class="price__item slider__item">
-              <tr class="price__heading">
-                <th>
-                  Стандарт
-                  <span>3,99 USD</span>
-                </th>
-              </tr>
-              <tr class="price__filter">
-                <td>
-                  Розовый фильтр
-                </td>
-              </tr>
-              <tr class="price__smiles">
-                <td>
-                  Смайлики
-                </td>
-              </tr>
-              <tr class="price__commentary">
-                <td>
-                  Комментарии
-                </td>
-              </tr>
-            </tbody>
+            <tr class="price__row slider__item">
+              <th class="price__cell price__cell-heading--hidden">
+                Тарифный план
+              </th>
+              <td class="price__cell price__cell-text">
+                База
+              </td>
+              <td class="price__cell price__cell-text price__cell--hit">
+                Стандарт
+              </td>
+              <td class="price__cell price__cell-text">
+                Анлим
+              </td>
+            </tr>
+            <tr class="price__row slider__item">
+              <th class="price__cell price__cell-heading--hidden">
+                Цена
+              </th>
+              <td class="price__cell price__cell-text">
+                1,99 USD
+              </td>
+              <td class="price__cell price__cell-text">
+                3,99 USD
+              </td>
+              <td class="price__cell price__cell-text">
+                9,99 USD
+              </td>
+            </tr>
+            <tr class="price__row slider__item">
+              <th class="price__cell price__cell-heading">
+                Розовый фильтр
+              </th>
+              <td class="price__cell--yes">
+                <span class="visually-hidden">Да</span>
+              </td>
+              <td class="price__cell--yes">
+                <span class="visually-hidden">Да</span>
+              </td>
+              <td class="price__cell--yes">
+                <span class="visually-hidden">Да</span>
+              </td>
+            </tr>
+            <tr class="price__row slider__item">
+              <th class="price__cell price__cell-heading">
+                Смайлики
+              </th>
+              <td class="price__cell--no">
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="price__cell--yes">
+                <span class="visually-hidden">Да</span>
+              </td>
+              <td class="price__cell--yes">
+                <span class="visually-hidden">Да</span>
+              </td>
+            </tr>
+            <tr class="price__row slider__item">
+              <th class="price__cell price__cell-heading">
+                Комментарии
+              </th>
+              <td class="price__cell--no">
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="price__cell--no">
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="price__cell--yes">
+                <span class="visually-hidden">Да</span>
+              </td>
+            </tr>
           </table>
           <p class="price__toggles slider__toggles">
             <button class="slider__toggle" type="button">1</button>
@@ -164,25 +211,24 @@
       </section>
 
       <section class="contacts">
-        <h2 class="visually-hidden">Наши контакты</h2>
-        <p class="contacts__text paragraph">
-          Остались вопросы?
-        </p>
-        <p class="contacts__text paragraph">
+        <h2 class="contacts__capture heading-primary">Свяжитесь с нами!</h2>
+        <p class="contacts__text heading-primary">
           Свяжитесь с нами!
         </p>
-        <div class="contacts__item">
-          Звоните
-          <span>+7 (812) 555-66-66</span>
-        </div>
-        <div class="contacts__item">
-          Приезжайте в гости:
-          <span>ул. Большая Конюшенная, 19/8</span>
-        </div>
-        <div class="contacts__item">
-          Пишите:
-          <span>mail@htmlacademy.ru</span>
-        </div>
+        <address class="contacts__wrapper">
+          <div class="contacts__item">
+            Звоните
+            <a href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </div>
+          <div class="contacts__item">
+            Приезжайте в гости:
+            <span>ул. Большая Конюшенная, 19/8</span>
+          </div>
+          <div class="contacts__item">
+            Пишите:
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+        </address>
         <img class="contacts__map" src="#" width="300" height="150" alt="Мы на карте">
       </section>
 
