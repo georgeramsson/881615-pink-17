@@ -56,16 +56,16 @@
           <fieldset class="form__fieldset">
             <ul class="form__list">
               <li class="form__item">
-                <label for="user-surname">Фамилия:</label>
-                <input class="form__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию">
+                <label class="label" for="user-surname">Фамилия:</label>
+                <input class="input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию">
               </li>
               <li class="form__item">
-                <label for="user-name">Имя:</label>
-                <input class="form__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя">
+                <label class="label" for="user-name">Имя:</label>
+                <input class="input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя">
               </li>
               <li class="form__item">
-                <label for="user-patronymic">Отчество:</label>
-                <input class="form__input" type="text" name="user-patronymic" id="user-patronymic" placeholder="Ну и отчество тоже">
+                <label class="label" for="user-patronymic">Отчество:</label>
+                <input class="input" type="text" name="user-patronymic" id="user-patronymic" placeholder="Ну и отчество тоже">
               </li>
             </ul>
           </fieldset>
@@ -77,37 +77,37 @@
               <li class="form__item">
                 <div class="checkbox">
                   <input class="visually-hidden" type="checkbox" name="shark" id="shark"  checked>
-                  <label for="shark">Сделал селфи с акулой</label>
+                  <label class="label" for="shark">Сделал селфи с акулой</label>
                 </div>
               </li>
               <li class="form__item">
                 <div class="checkbox">
                   <input class="visually-hidden" type="checkbox" name="beach" id="beach"  checked>
-                  <label for="beach">Обгорел на пляже</label>
+                  <label class="label" for="beach">Обгорел на пляже</label>
                 </div>
               </li>
               <li class="form__item">
                 <div class="checkbox">
                   <input class="visually-hidden" type="checkbox" name="chuck" id="chuck">
-                  <label for="chuck">Видел Чака Норриса</label>
+                  <label class="label" for="chuck">Видел Чака Норриса</label>
                 </div>
               </li>
               <li class="form__item">
                 <div class="checkbox">
                   <input class="visually-hidden" type="checkbox" name="souvenir" id="souvenir">
-                  <label for="souvenir">Накупил сувениров</label>
+                  <label class="label" for="souvenir">Накупил сувениров</label>
                 </div>
               </li>
               <li class="form__item">
                 <div class="checkbox">
                   <input class="visually-hidden" type="checkbox" name="tower" id="tower" checked>
-                  <label for="tower">Удержал башню</label>
+                  <label class="label" for="tower">Удержал башню</label>
                 </div>
               </li>
               <li class="form__item">
                 <div class="checkbox">
                   <input class="visually-hidden" type="checkbox" name="hotel" id="hotel">
-                  <label for="hotel">Разгромил отель</label>
+                  <label class="label" for="hotel">Разгромил отель</label>
                 </div>
               </li>
             </ul>
@@ -115,12 +115,12 @@
           <fieldset class="form__fieldset user-contacts">
             <ul class="form__list">
               <li class="form__item">
-                <label for="user-phone">Номер телефона:</label>
-                <input class="form__input user-contacts__input" type="text" name="user-phone" id="user-phone" placeholder="Номер, пожалуйста">
+                <label class="label" for="user-phone">Номер телефона:</label>
+                <input class="input user-contacts__input" type="text" name="user-phone" id="user-phone" placeholder="Номер, пожалуйста">
               </li>
               <li class="form__item">
-                <label for="user-mail">Адрес почты:</label>
-                <input class="form__input user-contacts__input" type="text" name="user-mail" id="user-mail" placeholder="Введите почту*">
+                <label class="label" for="user-mail">Адрес почты:</label>
+                <input class="input user-contacts__input" type="text" name="user-mail" id="user-mail" placeholder="Введите почту*">
               </li>
             </ul>
           </fieldset>
@@ -132,28 +132,28 @@
               <li class="form__item">
                 <div class="radio-button">
                   <input class="visually-hidden" type="radio" name="os" id="ios" checked>
-                  <label for="ios">Pink для iOS</label>
+                  <label class="label" for="ios">Pink для iOS</label>
                 </div>
               </li>
               <li class="form__item">
                 <div class="radio-button">
                   <input class="visually-hidden" type="radio" name="os" id="android">
-                  <label for="android">Pink на Android</label>
+                  <label class="label" for="android">Pink на Android</label>
                 </div>
               </li>
               <li class="form__item">
                 <div class="radio-button">
                   <input class="visually-hidden" type="radio" name="os" id="wp">
-                  <label for="wp">Windows Phone</label>
+                  <label class="label" for="wp">Windows Phone</label>
                 </div>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__fieldset">
-            <label class="form__legend" for="user-text">
+            <label class="form__legend label" for="user-text">
               Опишите свои эмоции
             </label>
-            <textarea class="form__textarea" name="user-text" id="user-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="textarea" name="user-text" id="user-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="form__send">
             <button class="form__button" type="button">Отправить форму</button>
@@ -189,21 +189,18 @@
       <ul class="page-footer_social social-list">
         <li class="social-list__item twitter">
           <a class="twitter__link" href="#">
-
+            <span class="visually-hidden">Our Twitter</span>
           </a>
-          <span class="visually-hidden">Our Twitter</span>
         </li>
         <li class="social-list__item facebook">
           <a class="facebook__link" href="#">
-
+            <span class="visually-hidden">Our Facebook</span>
           </a>
-          <span class="visually-hidden">Our Facebook</span>
         </li>
         <li class="social-list__item youtube">
           <a class="youtube__link" href="#">
-
+            <span class="visually-hidden">Our Youtube</span>
           </a>
-          <span class="visually-hidden">Our Youtube</span>
         </li>
       </ul>
       <div class="page-footer__creator html-academy">
@@ -214,7 +211,6 @@
           <img class="html-academy__image" src="#" width="300" height="150" alt="Логотип HTML-Academy" >
         </a>
       </div>
-
     </footer>
 
   </body>
