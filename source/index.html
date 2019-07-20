@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -11,9 +12,11 @@
         <img class="page-header__logo-image" src="#" width="300" height="150" alt="Логотип Пинк" >
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <div class="main-nav__wrapper">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <ul class="site-list">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link">
@@ -48,29 +51,31 @@
         <h2 class="visually-hidden">Скачайте наше приложение!</h2>
 
         <img class="download-app__image" src="#" width="300" height="150" alt="Мобильное приложение Pink">
-        <a class="download-app__button" href="https://www.apple.com/ru/ios/app-store/">
-          Скачать приложение
-        </a>
-        <ul class="download-app__list os-list">
-          <li class="os-list__item">
-            <a class="os-list__link" href="https://www.apple.com/ru/ios/app-store/">
-              <span class="visually-hidden">Apple</span>
-            </a>
-          </li>
-          <li class="os-list__item">
-            <a class="os-list__link" href="https://play.google.com/store">
-              <span class="visually-hidden">Android</span>
-            </a>
-          </li>
-          <li class="os-list__item">
-            <a class="os-list__link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
-              <span class="visually-hidden">Windows Phone</span>
-            </a>
-          </li>
-        </ul>
-        <p class="download-app__text">
-          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </p>
+        <div class="download-app__wrapper">
+          <a class="download-app__button" href="https://www.apple.com/ru/ios/app-store/">
+            Скачать приложение
+          </a>
+          <ul class="download-app__list os-list">
+            <li class="os-list__item">
+              <a class="os-list__link" href="https://www.apple.com/ru/ios/app-store/">
+                <span class="visually-hidden">Apple</span>
+              </a>
+            </li>
+            <li class="os-list__item">
+              <a class="os-list__link" href="https://play.google.com/store">
+                <span class="visually-hidden">Android</span>
+              </a>
+            </li>
+            <li class="os-list__item">
+              <a class="os-list__link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+                <span class="visually-hidden">Windows Phone</span>
+              </a>
+            </li>
+          </ul>
+          <p class="download-app__text">
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+          </p>
+        </div>
       </section>
 
       <section class="advantages">
@@ -212,26 +217,30 @@
 
       <section class="contacts">
         <h2 class="contacts__capture heading-primary">
-          <span class="contacts__text heading-primary">Остались вопросы?</span>
-          <span class="contacts__text heading-primary">Свяжитесь с нами!</span>
+          <p class="contacts__text">
+            Остались вопросы?
+          </p>
+          <p class="contacts__text">
+            Свяжитесь с нами!
+          </p>
         </h2>
         <address class="contacts__wrapper">
           <p class="contacts__item">
             Звоните
           </p>
-          <a href="tel:+78125556666">
+          <a class="contacts__item contacts__item--info" href="tel:+78125556666">
             +7 (812) 555-66-66
           </a>
           <p class="contacts__item">
             Приезжайте в гости:
           </p>
-          <p class="contacts__item">
+          <p class="contacts__item contacts__item--info">
             ул. Большая Конюшенная, 19/8
           </p>
           <p class="contacts__item">
             Пишите:
           </p>
-          <a href="mailto:mail@htmlacademy.ru">
+          <a class="contacts__item contacts__item--info" href="mailto:mail@htmlacademy.ru">
             mail@htmlacademy.ru
           </a>
         </address>
