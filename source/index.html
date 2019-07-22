@@ -3,40 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="#" width="300" height="150" alt="Логотип Пинк" >
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Пинк" >
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <div class="main-nav__wrapper">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <ul class="site-list">
           <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">
+            <a class="page-header__link site-list__link">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">
+            <a class="page-header__link site-list__link" href="photo.html">
               Фотографии
             </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="form.html">
+            <a class="page-header__link site-list__link" href="form.html">
               Конкурс
             </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">
+            <a class="page-header__link site-list__link" href="#">
               HTML Academy
             </a>
           </li>
         </ul>
       </nav>
+      <div class="page-header__title">
+        <img class="download-app__image" src="img/iphone-hand-mobile@1x.png" width="320" height="314" alt="Мобильное приложение Pink">
+      </div>
     </header>
 
     <main class="page-main">
@@ -47,30 +53,31 @@
 
         <h2 class="visually-hidden">Скачайте наше приложение!</h2>
 
-        <img class="download-app__image" src="#" width="300" height="150" alt="Мобильное приложение Pink">
-        <a class="download-app__button" href="https://www.apple.com/ru/ios/app-store/">
-          Скачать приложение
-        </a>
-        <ul class="download-app__list os-list">
-          <li class="os-list__item">
-            <a class="os-list__link" href="https://www.apple.com/ru/ios/app-store/">
-              <span class="visually-hidden">Apple</span>
-            </a>
-          </li>
-          <li class="os-list__item">
-            <a class="os-list__link" href="https://play.google.com/store">
-              <span class="visually-hidden">Android</span>
-            </a>
-          </li>
-          <li class="os-list__item">
-            <a class="os-list__link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
-              <span class="visually-hidden">Windows Phone</span>
-            </a>
-          </li>
-        </ul>
-        <p class="download-app__text">
-          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </p>
+        <div class="download-app__wrapper">
+          <a class="download-app__button" href="https://www.apple.com/ru/ios/app-store/">
+            Скачать приложение
+          </a>
+          <ul class="download-app__list os-list">
+            <li class="os-list__item">
+              <a class="os-list__link" href="https://www.apple.com/ru/ios/app-store/">
+                <span class="visually-hidden">Apple</span>
+              </a>
+            </li>
+            <li class="os-list__item">
+              <a class="os-list__link" href="https://play.google.com/store">
+                <span class="visually-hidden">Android</span>
+              </a>
+            </li>
+            <li class="os-list__item">
+              <a class="os-list__link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+                <span class="visually-hidden">Windows Phone</span>
+              </a>
+            </li>
+          </ul>
+          <p class="download-app__text">
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+          </p>
+        </div>
       </section>
 
       <section class="advantages">
@@ -149,13 +156,13 @@
               <th class="visually-hidden">
                 Цена
               </th>
-              <td class="price__cell price__cell--text">
+              <td class="price__cell price__cell--value">
                 1,99 USD
               </td>
-              <td class="price__cell price__cell--text">
+              <td class="price__cell price__cell--value">
                 3,99 USD
               </td>
-              <td class="price__cell price__cell--text">
+              <td class="price__cell price__cell--value">
                 9,99 USD
               </td>
             </tr>
@@ -211,31 +218,35 @@
       </section>
 
       <section class="contacts">
-        <h2 class="contacts__capture heading-primary">
-          <span class="contacts__text heading-primary">Остались вопросы?</span>
-          <span class="contacts__text heading-primary">Свяжитесь с нами!</span>
-        </h2>
+        <div class="contacts__capture heading-primary">
+          <p class="contacts__text">
+            Остались вопросы?
+          </p>
+          <h2 class="contacts__text">
+            Свяжитесь с нами!
+          </h2>
+        </div>
         <address class="contacts__wrapper">
           <p class="contacts__item">
             Звоните
           </p>
-          <a href="tel:+78125556666">
+          <a class="contacts__item contacts__item--info" href="tel:+78125556666">
             +7 (812) 555-66-66
           </a>
           <p class="contacts__item">
             Приезжайте в гости:
           </p>
-          <p class="contacts__item">
+          <p class="contacts__item contacts__item--info">
             ул. Большая Конюшенная, 19/8
           </p>
           <p class="contacts__item">
             Пишите:
           </p>
-          <a href="mailto:mail@htmlacademy.ru">
+          <a class="contacts__item contacts__item--info" href="mailto:mail@htmlacademy.ru">
             mail@htmlacademy.ru
           </a>
         </address>
-        <img class="contacts__map" src="#" width="300" height="150" alt="Мы на карте">
+        <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Мы на карте">
       </section>
 
     </main>
