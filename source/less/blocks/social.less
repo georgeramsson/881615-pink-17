@@ -1,0 +1,26 @@
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  fill: #d22856;
+  border: 2px solid #e9ebec;
+  border-radius: 50%;
+
+  &--youtube {
+    padding-left: 5px;
+    width: 40px;
+  }
+
+  &:hover {
+    border-color: #283645;
+  }
+
+  &:active {
+    fill: fade(#d22856, 30%);
+    border-color: fade(#283645, 30%);
+  }
+}

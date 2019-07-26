@@ -1,0 +1,89 @@
+.label {
+  position: relative;
+  display: block;
+
+  &--checkbox {
+    padding-left: 70px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 35px;
+      height: 35px;
+
+      border: 2px solid #e5e5e5;
+    }
+
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;
+
+        border: 2px solid #283645;
+      }
+    }
+
+    &:active {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;
+
+        border: 2px solid #d22856;
+      }
+    }
+  }
+
+  &--radio {
+    padding-left: 70px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 35px;
+      height: 35px;
+
+      border: 2px solid #e5e5e5;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;
+
+        border: 2px solid #283645;
+        border-radius: 50%;
+      }
+    }
+
+    &:active {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;
+
+        border: 2px solid #d22856;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -11,10 +11,21 @@
 }
 
 .download-app__button {
-  font-size: 18px;
+  padding: 12px 25px;
+
+  font-size: 21px;
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
+
+  &:hover {
+    color: #d22856;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: fade(#d22856, 30%);
+  }
 }
 
 .download-app__text {

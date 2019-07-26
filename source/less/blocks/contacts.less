@@ -18,6 +18,7 @@
 }
 
 .contacts__item {
+  position: relative;
   margin-bottom: 11px;
 
   font-size: 18px;
@@ -30,5 +31,15 @@
     font-size: 24px;
     font-weight: 300;
     color: #d22856;
+
+    &:hover {
+      color: #283645;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: fade(#283645, 30%);
+      text-decoration: none;
+    }
   }
 }
