@@ -10,6 +10,9 @@
 }
 
 .user-form__form {
+  display: flex;
+  flex-direction: column;
+
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -40,6 +43,65 @@
   }
 }
 
-.user-form__send {
+.user-form__button {
   .center();
+}
+
+@media (min-width: @tablet-width) {
+  .user-form__fieldset {
+    &--bio {
+      order: 1;
+    }
+
+    &--os {
+      order: 2;
+    }
+
+    &--contacts {
+      order: 3;
+    }
+
+    &--achievements {
+      order: 4;
+    }
+
+    &--reviews {
+      order: 5;
+    }
+  }
+
+  .user-form__send {
+    display: flex;
+    justify-content: space-between;
+    order: 7;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-form__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .user-form__fieldset {
+    width: 100%;
+
+    &--bio {
+      width: 45%;
+    }
+
+    &--os {
+      width: 45%;
+    }
+  }
+
+  .user-form__contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user-form__send {
+    width: 100%;
+  }
 }
