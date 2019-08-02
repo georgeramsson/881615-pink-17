@@ -1,10 +1,45 @@
-.main-nav__wrapper {
-  border-bottom: 1px solid #000000;
+.main-nav {
+  position: relative;
+  background-color: #283645;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -392px;
+    width: 320px;
+    height: 462px;
+
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: -620px;
+      width: 1200px;
+      height: 729px;
+
+      background-image: url("../img/bg-back-tablet@1x.jpg");
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    width: 660px;
+    width: 640px;
+    margin-right: 120px;
+    background-color: inherit;
+
+    &::after {
+      display: none;
+    }
   }
 
   .main-nav__wrapper {

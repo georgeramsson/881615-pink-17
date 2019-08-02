@@ -1,19 +1,19 @@
 .page-header {
   display: flex;
   flex-direction: column;
-
-  background-color: #283645;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
 }
 
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  background-color: fade(#000000, 30%);
   .mobile-padding();
   /* Временно для сетки */
   min-height: 70px;
+}
+
+.page-header__logo {
+  margin-top: 20px;
 }
 
 .page-header__logo-image {
@@ -45,41 +45,48 @@
 }
 
 .page-header__title {
-  margin-top: 30px;
   .mobile-padding();
 
   &--main-page {
-    height: 396px;
+    height: 392px;
 
     background-image: url("../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: left bottom;
+  }
+
+  &--second-page {
+    height: 170px;
+  }
+
+  &--third-page {
+    height: 170px;
   }
 }
 
 .page-header__caption {
   display: block;
   width: 240px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  .mobile-padding();
 
   font-size: 24px;
   line-height: 30px;
   font-weight: 300;
   color: #ffffff;
   .center();
+
+  &--margin {
+    margin-top: 35px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
-    background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-repeat: no-repeat;
-  }
-
   .page-header__wrapper {
     padding-top: 25px;
     /* Временно для сетки */
-    min-height: 110px;
+    min-height: 85px;
 
     background-color: fade(#000000, 30%);
   }
@@ -94,23 +101,18 @@
     }
 
     &--second-page {
-      margin-top: 80px;
-      margin-bottom: 145px;
-      margin-left: auto;
-      margin-right: auto;
+      height: 330px;
     }
 
     &--third-page {
-      margin-top: 80px;
-      margin-bottom: 80px;
-      margin-left: auto;
-      margin-right: auto;
+      height: 330px;
     }
   }
 
   .page-header__caption {
     width: 260px;
     margin-top: 100px;
+    margin-left: 0;
 
     font-size: 50px;
     line-height: 1.2;
@@ -121,18 +123,29 @@
 
     &--second-page {
       width: 620px;
+      margin-top: 80px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
   }
 
   .page-header__wrapper {
     .desktop-padding();
+  }
+
+  .page-header__burger {
+    display: none;
   }
 
   .page-header__logo {
@@ -146,10 +159,11 @@
   }
 
   .page-header__title {
+    width: 100%;
     .desktop-padding();
 
     &--main-page {
-      height: 745px;
+      height: 735px;
 
       background-image: url("../img/iphone-hand-desktop@1x.png");
       background-repeat: no-repeat;
