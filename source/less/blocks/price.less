@@ -10,6 +10,7 @@
 }
 
 .price__cell {
+  position: relative;
   width: 280px;
   height: 60px;
 
@@ -73,6 +74,54 @@
     text-transform: uppercase;
     text-align: left;
   }
+
+  &--yes {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 53%;
+      right: 3%;
+      width: 20px;
+      height: 3px;
+      background-color: #3dc644;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 60%;
+      right: 8%;
+      width: 10px;
+      height: 3px;
+      background-color: #3dc644;
+      transform: rotate(45deg);
+    }
+  }
+
+  &--no {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 53%;
+      right: 3%;
+      width: 20px;
+      height: 3px;
+      background-color: #f25b26;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 53%;
+      right: 3%;
+      width: 20px;
+      height: 3px;
+      background-color: #f25b26;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .price__cell-text {
@@ -102,6 +151,58 @@
     &--heading {
       display: table-cell;
     }
+
+    &--yes {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 53%;
+        right: 48%;
+        width: 20px;
+        height: 3px;
+        background-color: #3dc644;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 60%;
+        right: 54%;
+        width: 10px;
+        height: 3px;
+        background-color: #3dc644;
+        transform: rotate(45deg);
+      }
+    }
+
+    &--no {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 53%;
+        right: 48%;
+        width: 20px;
+        height: 3px;
+        background-color: #f25b26;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 53%;
+        right: 48%;
+        width: 20px;
+        height: 3px;
+        background-color: #f25b26;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .price__cell-text {
+    display: none;
   }
 }
 
