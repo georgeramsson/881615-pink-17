@@ -1,8 +1,4 @@
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
   margin-bottom: 20px;
 
   background-color: #ffffff;
@@ -20,7 +16,6 @@
 .gallery__item {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .gallery__content {
@@ -61,6 +56,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .gallery__item {
     width: 37%;
 
