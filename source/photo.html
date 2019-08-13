@@ -2,183 +2,173 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo">
-        <svg class="page-header__logo-image" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
-          <g>
-            <path d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
-            <path  d="M21.729,1.288C21.729,0.58,22.308,0,22.983,0c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.288-1.288,1.288c-0.676,0-1.255-0.58-1.255-1.288V1.288z"/>
-            <path  d="M30.87,1.32c0-0.676,0.579-1.256,1.256-1.256h0.354c0.58,0,0.934,0.29,1.288,0.74l13.684,17.45V1.256 C47.451,0.58,47.998,0,48.707,0c0.676,0,1.223,0.58,1.223,1.256v20.348c0,0.676-0.482,1.191-1.158,1.191h-0.129 c-0.548,0-0.934-0.322-1.32-0.772L33.349,4.153v17.45c0,0.676-0.547,1.256-1.255,1.256c-0.677,0-1.224-0.58-1.224-1.256V1.32z"/>
-            <path  d="M56.3,1.288C56.3,0.58,56.879,0,57.556,0c0.708,0,1.287,0.58,1.287,1.288v12.331L71.689,0.451 C71.979,0.193,72.269,0,72.688,0c0.676,0,1.224,0.612,1.224,1.256c0,0.354-0.161,0.644-0.419,0.901l-7.984,7.92l8.564,10.561 c0.225,0.29,0.354,0.547,0.354,0.934c0,0.676-0.579,1.288-1.287,1.288c-0.483,0-0.806-0.258-1.03-0.58l-8.403-10.463l-4.862,4.861 v4.894c0,0.708-0.579,1.288-1.287,1.288c-0.677,0-1.256-0.58-1.256-1.288V1.288z"/>
-          </g>
-        </svg>
-      </a>
-      <nav class="main-nav">
+      <nav class="main-nav page-header__main-nav">
         <div class="main-nav__wrapper">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          <div class="main-nav__top-menu">
+            <a class="main-nav__logo logo">
+              <img class="logo__image logo__image--header" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип «Pink»">
+            </a>
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            </li>
+          </ul>
         </div>
-        <ul class="site-list">
-          <li class="site-list__item">
-            <a class="page-header__link site-list__link" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="page-header__link site-list__link site-list__link--active">
-              Фотографии
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="page-header__link site-list__link" href="form.html">
-              Конкурс
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="page-header__link site-list__link" href="#">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
       </nav>
-      <div class="page-header__title">
-        <h1 class="page-header__caption">
-          Фотографии пользователей
-        </h1>
-      </div>
+      <section class="page-header__banner page-header__banner--second-page">
+        <h1 class="page-header__title page-header__title--second-page">Фотографии пользователей</h1>
+      </section>
     </header>
 
     <main class="page-main">
 
       <section class="gallery">
+        <h2 class="visually-hidden">Галерея</h2>
         <p class="gallery__text">
           Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
         </p>
-        <figure class="gallery__item photo photo--main">
-          <img class="gallery__image photo__image" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография Анны">
-          <figcaption class="gallery__content photo__content">
-            <p class="photo__commentary">
+        <figure class="gallery__item gallery__item--main photo photo--main">
+          <div class="gallery__panorama">
+            <img class="gallery__image gallery__image--main photo__image" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография Анны">
+          </div>
+          <figcaption class="gallery__content photo__content container">
+            <p class="gallery__commentary photo__commentary">
               Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
             </p>
-            <b class="photo__author">
+            <b class="gallery__author photo__author">
               Анна <span class="photo__time">(5 МИНУТ НАЗАД)</span>
             </b>
-            <p class="photo__likes">
+            <p class="gallery__likes photo__likes">
               Нравится: 215
             </p>
-            <button class="photo__button" type="button" name="like">
+            <button class="gallery__button photo__button" type="button" name="like">
               <span class="visually-hidden">Like</span>
             </button>
           </figcaption>
         </figure>
-        <figure class="gallery__item photo">
-          <img class="photo__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография Левона">
-          <figcaption class="gallery__content photo__content">
-            <p class="photo__commentary">
-              Вчера он на луну летал, сегодня в руки к нам попал.
-            </p>
-            <b class="photo__author">
-              Левон <span class="photo__time">(5 ЧАСОВ НАЗАД)</span>
-            </b>
-            <p class="photo__likes">
-              Нравится: 356
-            </p>
-            <button class="photo__button" type="button" name="like">
-              <span class="visually-hidden">Like</span>
-            </button>
-          </figcaption>
-        </figure>
-        <figure class="gallery__item photo">
-          <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография Антона">
-          <figcaption class="gallery__content photo__content">
-            <p class="photo__commentary">
-              Соседи будут рады!
-            </p>
-            <b class="photo__author">
-              Антон <span class="photo__time">(12 ЧАСОВ НАЗАД)</span>
-            </b>
-            <p class="photo__likes">
-              Нравится: 666
-            </p>
-            <button class="photo__button" type="button" name="like">
-              <span class="visually-hidden">Like</span>
-            </button>
-          </figcaption>
-        </figure>
-        <figure class="gallery__item photo">
-          <img class="photo__image" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография Бориса">
-          <figcaption class="gallery__content photo__content">
-            <p class="photo__commentary">
-              Здесь могла быть ваша цитата о высоком и вечном.
-            </p>
-            <b class="photo__author">
-              Борис <span class="photo__time">(20 ЧАСОВ НАЗАД)</span>
-            </b>
-            <p class="photo__likes">
-              Нравится: 215
-            </p>
-            <button class="photo__button" type="button" name="like">
-              <span class="visually-hidden">Like</span>
-            </button>
-          </figcaption>
-        </figure>
-        <figure class="gallery__item photo">
-          <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография Сергея">
-          <figcaption class="gallery__content photo__content">
-            <p class="photo__commentary">
-              Самая кубанская в мире!
-            </p>
-            <b class="photo__author">
-              Сергей <span class="photo__time">(25 ЧАСОВ НАЗАД)</span>
-            </b>
-            <p class="photo__likes">
-              Нравится: 4
-            </p>
-            <button class="photo__button" type="button" name="like">
-              <span class="visually-hidden">Like</span>
-            </button>
-          </figcaption>
-        </figure>
-        <figure class="gallery__item photo">
-          <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография Максима">
-          <figcaption class="gallery__content photo__content">
-            <p class="photo__commentary">
-              Где снег-то?
-            </p>
-            <b class="photo__author">
-              Максим <span class="photo__time">(40 ЧАСОВ НАЗАД)</span>
-            </b>
-            <p class="photo__likes">
-              Нравится: 150
-            </p>
-            <button class="photo__button" type="button" name="like">
-              <span class="visually-hidden">Like</span>
-            </button>
-          </figcaption>
-        </figure>
-        <figure class="gallery__item photo">
-          <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография Надежды">
-          <figcaption class="gallery__content photo__content">
-            <p class="photo__commentary">
-              Всем GM и взаимные лайки!
-            </p>
-            <b class="photo__author">
-              Надежда <span class="photo__time">(45 ЧАСОВ НАЗАД)</span>
-            </b>
-            <p class="photo__likes">
-              Нравится: 2560
-            </p>
-            <button class="photo__button" type="button" name="like">
-              <span class="visually-hidden">Like</span>
-            </button>
-          </figcaption>
-        </figure>
+        <div class="gallery__wrapper container">
+          <figure class="gallery__item photo">
+            <img class="gallery__image photo__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография Левона">
+            <figcaption class="gallery__content photo__content">
+              <p class="gallery__commentary photo__commentary">
+                Вчера он на луну летал, сегодня в руки к нам попал.
+              </p>
+              <b class="gallery__author photo__author">
+                Левон <span class="photo__time">(5 ЧАСОВ НАЗАД)</span>
+              </b>
+              <p class="gallery__likes photo__likes">
+                Нравится: 356
+              </p>
+              <button class="gallery__button photo__button" type="button" name="like">
+                <span class="visually-hidden">Like</span>
+              </button>
+            </figcaption>
+          </figure>
+          <figure class="gallery__item photo">
+            <img class="gallery__image photo__image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография Антона">
+            <figcaption class="gallery__content photo__content">
+              <p class="gallery__commentary photo__commentary">
+                Соседи будут рады!
+              </p>
+              <b class="gallery__author photo__author">
+                Антон <span class="photo__time">(12 ЧАСОВ НАЗАД)</span>
+              </b>
+              <p class="gallery__likes photo__likes">
+                Нравится: 666
+              </p>
+              <button class="gallery__button photo__button" type="button" name="like">
+                <span class="visually-hidden">Like</span>
+              </button>
+            </figcaption>
+          </figure>
+          <figure class="gallery__item photo">
+            <img class="gallery__image photo__image" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография Бориса">
+            <figcaption class="gallery__content photo__content">
+              <p class="gallery__commentary photo__commentary">
+                Здесь могла быть ваша цитата о высоком и вечном.
+              </p>
+              <b class="gallery__author photo__author">
+                Борис <span class="photo__time">(20 ЧАСОВ НАЗАД)</span>
+              </b>
+              <p class="gallery__likes photo__likes">
+                Нравится: 215
+              </p>
+              <button class="gallery__button photo__button" type="button" name="like">
+                <span class="visually-hidden">Like</span>
+              </button>
+            </figcaption>
+          </figure>
+          <figure class="gallery__item photo">
+            <img class="gallery__image photo__image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография Сергея">
+            <figcaption class="gallery__content photo__content">
+              <p class="gallery__commentary photo__commentary">
+                Самая кубанская в мире!
+              </p>
+              <b class="gallery__author photo__author">
+                Сергей <span class="photo__time">(25 ЧАСОВ НАЗАД)</span>
+              </b>
+              <p class="gallery__likes photo__likes">
+                Нравится: 4
+              </p>
+              <button class="gallery__button photo__button" type="button" name="like">
+                <span class="visually-hidden">Like</span>
+              </button>
+            </figcaption>
+          </figure>
+          <figure class="gallery__item photo">
+            <img class="gallery__image photo__image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография Максима">
+            <figcaption class="gallery__content photo__content">
+              <p class="gallery__commentary photo__commentary">
+                Где снег-то?
+              </p>
+              <b class="gallery__author photo__author">
+                Максим <span class="photo__time">(40 ЧАСОВ НАЗАД)</span>
+              </b>
+              <p class="gallery__likes photo__likes">
+                Нравится: 150
+              </p>
+              <button class="gallery__button photo__button" type="button" name="like">
+                <span class="visually-hidden">Like</span>
+              </button>
+            </figcaption>
+          </figure>
+          <figure class="gallery__item photo">
+            <img class="gallery__image photo__image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография Надежды">
+            <figcaption class="gallery__content photo__content">
+              <p class="gallery__commentary photo__commentary">
+                Всем GM и взаимные лайки!
+              </p>
+              <b class="gallery__author photo__author">
+                Надежда <span class="photo__time">(45 ЧАСОВ НАЗАД)</span>
+              </b>
+              <p class="gallery__likes photo__likes">
+                Нравится: 2560
+              </p>
+              <button class="gallery__button photo__button" type="button" name="like">
+                <span class="visually-hidden">Like</span>
+              </button>
+            </figcaption>
+          </figure>
+        </div>
+
       </section>
 
       <section class="photo-upload">
@@ -190,31 +180,35 @@
           Выкладывайте все, что накопилось в телефоне!
         </p>
         <form class="photo-upload__form uploading-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="uploading-form__image-upload">
+          <div class="photo-upload__image uploading-form__image-upload">
             <img class="uploading-form__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Фотография пользователя">
           </div>
-          <div class="uploading-form__filters">
-            <button class="uploading-form__filter-button" type="button"></button>
-            <input class="uploading-form__filter-range" type="range" name="filter-range-1">
-          </div>
-          <div class="uploading-form__filters">
-            <button class="uploading-form__filter-button" type="button"></button>
-            <input class="uploading-form__filter-range" type="range" name="filter-range-2">
-          </div>
-          <div class="uploading-form__filters">
-            <button class="uploading-form__filter-button" type="button"></button>
-            <input class="uploading-form__filter-range" type="range" name="filter-range-3">
-          </div>
-          <div class="uploading-form__buttons">
-            <button class="uploading-form__button uploading-form__button--post button" type="button">Запостить</button>
-            <button class="uploading-form__button uploading-form__button--cancel button" type="button">Отмена</button>
+          <div class="photo-upload__wrapper">
+            <div class="photo-upload__filters">
+              <div class="uploading-form__filters">
+                <button class="uploading-form__filter-button" type="button"></button>
+                <input class="uploading-form__filter-range" type="range" name="filter-range-1">
+              </div>
+              <div class="uploading-form__filters">
+                <button class="uploading-form__filter-button" type="button"></button>
+                <input class="uploading-form__filter-range" type="range" name="filter-range-2">
+              </div>
+              <div class="uploading-form__filters">
+                <button class="uploading-form__filter-button" type="button"></button>
+                <input class="uploading-form__filter-range" type="range" name="filter-range-3">
+              </div>
+            </div>
+            <div class="photo-upload__buttons uploading-form__buttons">
+              <button class="uploading-form__button uploading-form__button--post button" type="button">Запостить</button>
+              <button class="uploading-form__button uploading-form__button--cancel button" type="button">Отмена</button>
+            </div>
           </div>
         </form>
       </section>
 
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <a class="page-footer__logo" href="#">
         <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="320" height="284" alt="Логотип Пинк" >
       </a>
@@ -222,7 +216,7 @@
         <li class="social-list__item social">
           <a class="social__link" href="#">
             <span class="visually-hidden">Our Twitter</span>
-            <svg class="social__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+            <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
               <g id="W6EeEF_1_">
                 <g>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
@@ -234,7 +228,7 @@
         <li class="social-list__item social">
           <a class="social__link" href="#">
             <span class="visually-hidden">Our Facebook</span>
-            <svg class="social__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
+            <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
               <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
             </svg>
           </a>
@@ -242,7 +236,7 @@
         <li class="social-list__item social">
           <a class="social__link social__link--youtube" href="#">
             <span class="visually-hidden">Our Youtube</span>
-            <svg class="social__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
+            <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
               <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
             </svg>
           </a>

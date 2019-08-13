@@ -1,3 +1,148 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+
+  background-color: fade(#000000, 30%);
+}
+
 .main-nav__wrapper {
-  border-bottom: 1px solid #000000;
+  margin-bottom: 0;
+  background-color: #283645;
+}
+
+.main-nav__top-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 22px;
+  padding-bottom: 25px;
+}
+
+.main-nav__list {
+  .list-reset();
+}
+
+.main-nav__item {
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  .center();
+
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: #485461;
+  border-bottom-color: #000000;
+  border-left: none;
+  border-right: none;
+
+  &:first-child {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      border-style: solid;
+      border-width: 1px;
+      border-top-color: #000000;
+    }
+  }
+}
+
+.main-nav__link {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  &:hover {
+    color: #d22856;
+  }
+
+  &:active {
+    color: fade(#d22856, 30%);
+  }
+
+  &--active {
+    position: relative;
+
+    &:hover {
+      color: #ffffff;
+    }
+
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__top-menu {
+    width: 620px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 27px;
+    padding-bottom: 43px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: transparent;
+  }
+
+  .main-nav__top-menu {
+    width: 320px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+    width: 620px;
+  }
+
+  .main-nav__item {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: none;
+
+    &:first-child {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+  }
+
+  .main-nav__link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: none;
+
+    &:active {
+      &--active {
+        border-bottom: 2px solid #ffffff;
+      }
+    }
+  }
 }

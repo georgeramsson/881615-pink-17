@@ -3,6 +3,10 @@
   padding-bottom: 40px;
 
   .center();
+
+  &--main {
+    display: none;
+  }
 }
 
 .page-footer__logo-image {
@@ -12,5 +16,21 @@
 
   &:active {
     fill: fade(#d22856, 30%);
+  }
+}
+
+.page-footer_social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__creator {
+  display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
   }
 }
