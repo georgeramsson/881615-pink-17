@@ -1,11 +1,13 @@
 .uploading-form__button {
+  width: 280px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
 
   &--post {
-    padding: 17px 90px;
-
     color: #d22856;
     border-color: #d22856;
 
@@ -20,8 +22,6 @@
   }
 
   &--cancel {
-    padding: 17px 100px;
-
     color: #ebebec;
     border-color: #dddfe0;
 
@@ -34,5 +34,17 @@
       color: fade(#ebebec, 30%);
       background-color: #b5b9be;
     }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .uploading-form__button {
+    width: 260px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .uploading-form__button {
+    width: 180px;
   }
 }
