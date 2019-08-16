@@ -1,3 +1,7 @@
+.price {
+  background-color: #f2f2f2;
+}
+
 .price__wrapper {
   margin-top: 90px;
   overflow: hidden;
@@ -7,7 +11,7 @@
   width: 840px;
   border: none;
   border-collapse: collapse;
-  transform: translate(-27%);
+  transform: translate(-33%);
 }
 
 .price__cell {
@@ -35,6 +39,7 @@
   }
 
   &--value {
+    z-index: -1;
     height: 25px;
     padding-bottom: 25px;
 
@@ -51,6 +56,7 @@
   }
 
   &--hit {
+    position: relative;
     height: 25px;
     padding-top: 25px;
 
@@ -64,6 +70,31 @@
     background-color: #283645;
     border-top: none;
     border-bottom: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 73px;
+      height: 73px;
+      background-image: url("../img/bg-hit.svg");
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      content: "ХИТ";
+      position: absolute;
+      top: 5px;
+      left: 4px;
+      width: 73px;
+      height: 73px;
+
+      line-height: 30px;
+      font-weight: 400;
+      color: #ffffff;
+      transform: rotate(-45deg);
+    }
   }
 
   &--heading {
@@ -128,10 +159,22 @@
 }
 
 .price__toggles {
-  .center();
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+  margin-top: 40px;
+  margin-bottom: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 @media (min-width: @tablet-width) {
+  .price {
+    padding-bottom: 70px;
+  }
+
   .price__list {
     width: 620px;
     margin-left: auto;
@@ -164,6 +207,19 @@
       padding-top: 20px;
 
       font-size: 16px;
+
+      &::before {
+        width: 61px;
+        height: 61px;
+        background-image: url("../img/bg-hit-tablet.svg");
+      }
+
+      &::after {
+        top: 0;
+        left: 0;
+        width: 61px;
+        height: 61px;
+      }
     }
 
     &--heading {
@@ -223,9 +279,17 @@
       }
     }
   }
+
+  .price__toggles {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .price__wrapper {
+    margin-top: 50px;
+  }
+
   .price__list {
     width: 940px;
     margin-left: auto;
@@ -234,7 +298,44 @@
 
   .price__cell {
     width: 206px;
+    height: 55px;
     padding-left: 25px;
+
+    font-size: 18px;
+
+    &--text {
+      height: 20px;
+      padding-top: 18px;
+
+      font-size: 18px;
+    }
+
+    &--value {
+      height: 20px;
+      padding-bottom: 18px;
+
+      font-size: 24px;
+    }
+
+    &--hit {
+      height: 20px;
+      padding-top: 18px;
+
+      font-size: 18px;
+
+      &::before {
+        width: 73px;
+        height: 73px;
+        background-image: url("../img/bg-hit.svg");
+      }
+
+      &::after {
+        top: 5px;
+        left: 4px;
+        width: 73px;
+        height: 73px;
+      }
+    }
 
     &--yes {
       &::before {

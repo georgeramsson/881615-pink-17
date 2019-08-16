@@ -9,15 +9,17 @@
   <body>
 
     <header class="page-header">
-      <nav class="main-nav page-header__main-nav">
-        <div class="main-nav__wrapper">
+      <nav class="page-header__main-nav main-nav">
+        <div class="main-nav__wrapper main-nav__wrapper--closed main-nav__wrapper--no-js">
           <div class="main-nav__top-menu">
             <a class="main-nav__logo logo">
               <img class="logo__image logo__image--header" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип «Pink»">
             </a>
-            <button class="main-nav__toggle" type="button">Открыть меню</button>
+            <div class="main-nav__button">
+              <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--no-js" type="button"> <span class="visually-hidden">Открыть меню</span></button>
+            </div>
           </div>
-          <ul class="main-nav__list">
+          <ul class="main-nav__list main-nav__list--closed main-nav__list--no-js">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--active">Главная</a>
             </li>
@@ -84,11 +86,11 @@
         <p class="advantages__heading heading-primary">
           Устали от серости мегаполиса?
         </p>
-        <p class="advantages__heading advantages__heading--padding heading-primary">
-          Нам есть, что вам предложить!
+        <p class="advantages__heading heading-primary">
+          Нам есть, что вам <br> предложить!
         </p>
         <div class="advantages__items">
-          <div class="container">
+          <div class="advantages__wrapper container">
             <ul class="advantages__list">
               <li class="advantages__item advantages__item--gray">
                 <h3 class="advantages__title heading-secondary">Поднимает настроение</h3>
@@ -153,9 +155,9 @@
             </blockquote>
           </div>
           <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+            <button class="slider__toggle slider__toggle--active slider__toggle--arrow-left" type="button"><span class="visually-hidden">1</span></button>
+            <button class="slider__toggle slider__toggle--hidden" type="button"><span class="visually-hidden">2</span></button>
+            <button class="slider__toggle slider__toggle--arrow-right" type="button"><span class="visually-hidden">3</span></button>
           </p>
         </div>
       </section>
@@ -236,9 +238,9 @@
             </tr>
           </table>
           <p class="price__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+            <button class="slider__toggle" type="button"><span class="visually-hidden">1</span></button>
+            <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">2</span></button>
+            <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
           </p>
         </div>
       </section>
@@ -278,7 +280,12 @@
             </a>
           </div>
         </address>
-        <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Мы на карте">
+        <div class="contacts__map">
+          <svg role="image" aria-label="Мы на карте"
+          viewBox="440 460 320 200" class="contacts__image">
+            <image xlink:href="img/bg-map-desktop@1x.jpg"></image>
+          </svg>
+        </div>
       </section>
 
     </main>
@@ -327,5 +334,6 @@
       </div>
     </footer>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

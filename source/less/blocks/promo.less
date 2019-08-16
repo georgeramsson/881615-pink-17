@@ -51,7 +51,7 @@
   }
 
   .promo__list {
-    margin-top: 50px;
+    margin-top: z;
   }
 
   .promo__text {
@@ -62,6 +62,29 @@
 @media (min-width: @desktop-width) {
   .promo__wrapper {
     width: 380px;
-    margin-left: 0;
+    margin-left: -10px;
+    padding-top: 22px;
+    padding-left: 0;
+  }
+
+  .promo__button {
+    width: 295px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-size: 21px;
+  }
+
+  .promo__list {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-top: 66px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .promo__text {
+    width: 300px;
   }
 }

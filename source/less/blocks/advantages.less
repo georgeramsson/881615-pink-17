@@ -12,10 +12,16 @@
 }
 
 .advantages__items {
+  position: relative;
   padding-top: 90px;
-  padding-bottom: 295px;
 
   background-color: #f2f2f2;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__wrapper {
+  padding-bottom: 295px;
   background-image: url("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 50% 109%;
@@ -35,7 +41,7 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
-    margin-top: 180px;
+    margin-top: 60px;
   }
 
   .advantages__heading {
@@ -48,7 +54,12 @@
   .advantages__items {
     padding-top: 65px;
     padding-bottom: 0;
+  }
 
+  .advantages__wrapper {
+    margin-top: -75px;
+    padding-top: 75px;
+    padding-bottom: 0;
     background-image: url("../img/iphone-screen-3-tablet@1x.png");
     background-position: 5% 100%;
   }
@@ -75,20 +86,27 @@
 
 @media (min-width: @desktop-width) {
   .advantages {
-    margin-top: 180px;
+    margin-top: 65px;
   }
 
   .advantages__heading {
     width: 740px;
-    margin-top: -40px;
-    padding-left: 100px;
+    margin-bottom: 20px;
+    padding-left: 106px;
     padding-right: 100px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .advantages__items {
-    padding-top: 65px;
+    margin-top: 51px;
+    padding-top: 0;
     padding-bottom: 0;
+  }
 
+  .advantages__wrapper {
     background-image: none;
   }
 
@@ -97,6 +115,7 @@
     justify-content: space-between;
 
     width: 940px;
+    margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
     padding-left: 10px;
@@ -105,10 +124,11 @@
 
   .advantages__item {
     width: 30%;
-    padding-top: 310px;
+    padding-top: 330px;
+    padding-left: 0;
     .center();
 
-    background-position: top center;
+    background-position: left top;
     background-repeat: no-repeat;
 
     &--gray {
@@ -122,5 +142,9 @@
     &--smile {
       background-image: url("../img/iphone-screen-3-desktop@1x.png");
     }
+  }
+
+  .advantages__title {
+    margin-bottom: 20px;
   }
 }
