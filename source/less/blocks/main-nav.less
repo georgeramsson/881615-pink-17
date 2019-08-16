@@ -1,13 +1,20 @@
 .main-nav {
   display: flex;
   flex-direction: column;
-
-  background-color: fade(#000000, 30%);
 }
 
 .main-nav__wrapper {
   margin-bottom: 0;
-  background-color: #283645;
+
+  background-color: fade(#000000, 30%);
+
+  &--opened {
+    background-color: #283645;
+  }
+
+  &--no-js {
+    background-color: #283645;
+  }
 }
 
 .main-nav__top-menu {
@@ -19,8 +26,62 @@
   padding-bottom: 25px;
 }
 
+.main-nav__button {
+  width: 50px;
+}
+
+.main-nav__toggle {
+  border: none;
+  background-color: transparent;
+
+  &--closed {
+    width: 50px;
+    height: 25px;
+    background-image: url("../img/icon-menu-burger.svg");
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url("../img/icon-menu-burger-hover.png");
+    }
+
+    &:active {
+      background-image: url("../img/icon-menu-burger-active.png");
+    }
+  }
+
+  &--opened {
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/icon-menu-cross.png");
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url("../img/icon-menu-cross-hover.png");
+    }
+
+    &:active {
+      background-image: url("../img/icon-menu-cross-active.png");
+    }
+  }
+
+  &--no-js {
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/icon-menu-cross.png");
+  }
+}
+
 .main-nav__list {
+  background-color: #283645;
   .list-reset();
+
+  &--closed {
+    display: none;
+  }
+
+  &--no-js {
+    display: block;
+  }
 }
 
 .main-nav__item {
@@ -93,16 +154,24 @@
     justify-content: space-between;
     width: 940px;
     margin: 0 auto;
-    padding-top: 27px;
-    padding-bottom: 43px;
+    padding-top: 4px;
+    padding-bottom: 0;
     padding-left: 10px;
     padding-right: 10px;
 
     background-color: transparent;
+
+    &--opened {
+      background-color: transparent;
+    }
+
+    &--no-js {
+      background-color: transparent;
+    }
   }
 
   .main-nav__top-menu {
-    width: 320px;
+    width: 160px;
   }
 
   .main-nav__toggle {
@@ -113,6 +182,8 @@
     display: flex;
     justify-content: space-between;
     width: 620px;
+
+    background-color: transparent;
   }
 
   .main-nav__item {
