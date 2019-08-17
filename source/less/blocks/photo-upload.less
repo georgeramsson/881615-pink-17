@@ -1,3 +1,17 @@
+.photo-upload {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 200px;
+    width: 100%;
+    height: 1px;
+    background-color: #dddfe0;
+  }
+}
+
 .photo-upload__text {
   line-height: 30px;
   .center();
@@ -13,7 +27,48 @@
   background-color: #f2f2f2;
 }
 
+.photo-upload__filters {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 75px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.photo-upload__filter-range {
+  display: none;
+
+  &--active {
+    display: block;
+    position: absolute;
+    bottom: 45px;
+    left: 7%;
+  }
+}
+
+.photo-upload__buttons {
+  padding-top: 40px;
+}
+
+.photo-upload__button {
+  &:first-child {
+    margin-bottom: 12px;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .photo-upload {
+    &::after {
+      height: 0;
+    }
+  }
+
   .photo-upload__form {
     display: flex;
     justify-content: space-between;
@@ -27,7 +82,28 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 45%;
+    width: 300px;
+  }
+
+  .photo-upload__filters {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-upload__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .photo-upload__filter-range {
+    display: block;
+
+    &--active {
+      position: relative;
+      bottom: 0;
+      left: 0;
+    }
   }
 }
 
