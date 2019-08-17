@@ -9,15 +9,17 @@
   <body>
 
     <header class="page-header">
-      <nav class="main-nav page-header__main-nav">
-        <div class="main-nav__wrapper">
+      <nav class="page-header__main-nav main-nav">
+        <div class="main-nav__wrapper main-nav__wrapper--closed main-nav__wrapper--no-js">
           <div class="main-nav__top-menu">
             <a class="main-nav__logo logo">
               <img class="logo__image logo__image--header" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип «Pink»">
             </a>
-            <button class="main-nav__toggle" type="button"> <span class="visually-hidden">Открыть меню</span></button>
+            <div class="main-nav__button">
+              <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--no-js" type="button"> <span class="visually-hidden">Открыть меню</span></button>
+            </div>
           </div>
-          <ul class="main-nav__list">
+          <ul class="main-nav__list main-nav__list--closed main-nav__list--no-js">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
@@ -33,6 +35,7 @@
           </ul>
         </div>
       </nav>
+
       <section class="page-header__banner page-header__banner--second-page">
         <h1 class="page-header__title page-header__title--second-page">Фотографии пользователей</h1>
       </section>
@@ -47,21 +50,26 @@
         </p>
         <figure class="gallery__item gallery__item--main photo photo--main">
           <div class="gallery__panorama">
-            <img class="gallery__image gallery__image--main photo__image" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография Анны">
+            <svg role="image" aria-label="Фотография Анны"
+            viewBox="0 0 320 137" class="gallery__image gallery__image--main">
+              <image xlink:href="img/panorama-mobile@1x.jpg"></image>
+            </svg>
           </div>
-          <figcaption class="gallery__content photo__content container">
-            <p class="gallery__commentary photo__commentary">
-              Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
-            </p>
-            <b class="gallery__author photo__author">
-              Анна <span class="photo__time">(5 МИНУТ НАЗАД)</span>
-            </b>
-            <p class="gallery__likes photo__likes">
-              Нравится: 215
-            </p>
-            <button class="gallery__button photo__button" type="button" name="like">
-              <span class="visually-hidden">Like</span>
-            </button>
+          <figcaption class="gallery__content gallery__content--main photo__content">
+            <div class="container">
+              <p class="gallery__commentary gallery__commentary--main photo__commentary">
+                Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
+              </p>
+              <b class="gallery__author gallery__author--main photo__author">
+                Анна <span class="photo__time">(5 МИНУТ НАЗАД)</span>
+              </b>
+              <p class="gallery__likes gallery__likes--main photo__likes">
+                Нравится: 215
+              </p>
+              <button class="gallery__button gallery__button--main photo__button" type="button" name="like">
+                <span class="visually-hidden">Like</span>
+              </button>
+            </div>
           </figcaption>
         </figure>
         <div class="gallery__wrapper container">
@@ -179,28 +187,44 @@
         <p class="photo-upload__text">
           Выкладывайте все, что накопилось в телефоне!
         </p>
-        <form class="photo-upload__form uploading-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="photo-upload__form uploading-form container" action="https://echo.htmlacademy.ru" method="post">
           <div class="photo-upload__image uploading-form__image-upload">
             <img class="uploading-form__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Фотография пользователя">
           </div>
           <div class="photo-upload__wrapper">
             <div class="photo-upload__filters">
-              <div class="uploading-form__filters">
-                <button class="uploading-form__filter-button" type="button"></button>
-                <input class="uploading-form__filter-range" type="range" name="filter-range-1">
+              <div class="photo-upload__filter uploading-form__filter">
+                <button class="uploading-form__filter-button uploading-form__filter-button--crop uploading-form__filter-button--active" type="button">
+                  <svg class="uploading-form__no-fill" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                    <path d="M0,0h48v48H0V0z"/>
+                    <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+                  </svg>
+                </button>
+                <input class="photo-upload__filter-range photo-upload__filter-range--crop photo-upload__filter-range--active uploading-form__filter-range" type="range" name="filter-range-1" min="0" max="100" value="80">
               </div>
-              <div class="uploading-form__filters">
-                <button class="uploading-form__filter-button" type="button"></button>
-                <input class="uploading-form__filter-range" type="range" name="filter-range-2">
+              <div class="photo-upload__filter uploading-form__filter">
+                <button class="uploading-form__filter-button uploading-form__filter-button--fill" type="button">
+                  <svg class="uploading-form__no-fill" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                    <path d="M0,0h48v48H0V0z"/>
+                    <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+                    <rect y="40" width="48" height="3"/>
+                  </svg>
+                </button>
+                <input class="photo-upload__filter-range photo-upload__filter-range--fill uploading-form__filter-range" type="range" name="filter-range-2" min="0" max="100" value="50">
               </div>
-              <div class="uploading-form__filters">
-                <button class="uploading-form__filter-button" type="button"></button>
-                <input class="uploading-form__filter-range" type="range" name="filter-range-3">
+              <div class="photo-upload__filter uploading-form__filter">
+                <button class="uploading-form__filter-button uploading-form__filter-button--contrast" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+                  <path d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+                  <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+                  </svg>
+                </button>
+                <input class="photo-upload__filter-range photo-upload__filter-range--contrast uploading-form__filter-range" type="range" name="filter-range-3" min="0" max="100" value="30">
               </div>
             </div>
             <div class="photo-upload__buttons uploading-form__buttons">
-              <button class="uploading-form__button uploading-form__button--post button" type="button">Запостить</button>
-              <button class="uploading-form__button uploading-form__button--cancel button" type="button">Отмена</button>
+              <button class="photo-upload__button uploading-form__button uploading-form__button--post button" type="button">Запостить</button>
+              <button class="photo-upload__button uploading-form__button uploading-form__button--cancel button" type="button">Отмена</button>
             </div>
           </div>
         </form>
@@ -252,5 +276,7 @@
       </div>
     </footer>
 
+    <script src="js/menu.js"></script>
+    <script src="js/editor.js"></script>
   </body>
 </html>
