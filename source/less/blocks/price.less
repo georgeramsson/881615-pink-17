@@ -1,30 +1,36 @@
 .price {
+  min-height: 500px;
+
   background-color: #f2f2f2;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .price__wrapper {
-  margin-top: 90px;
+  padding-top: 121px;
   overflow: hidden;
 }
 
 .price__list {
   width: 840px;
   border: none;
+  background-color: #ffffff;
   border-collapse: collapse;
-  transform: translate(-33%);
+  transform: translate(-33.5%);
 }
 
 .price__cell {
   position: relative;
-  width: 251px;
-  height: 60px;
-  padding-left: 25px;
+  width: 275px;
+  height: 57px;
 
   border: 2px solid #e5e5e5;
 
   &--text {
-    height: 25px;
-    padding-top: 25px;
+    height: 15px;
+    padding-top: 15px;
+    padding-left: 0;
 
     font-size: 18px;
     font-weight: 700;
@@ -40,8 +46,9 @@
 
   &--value {
     z-index: -1;
-    height: 25px;
-    padding-bottom: 25px;
+    height: 15px;
+    padding-bottom: 20px;
+    padding-left: 0;
 
     font-size: 24px;
     font-weight: 300;
@@ -57,8 +64,9 @@
 
   &--hit {
     position: relative;
-    height: 25px;
-    padding-top: 25px;
+    height: 15px;
+    padding-top: 15px;
+    padding-left: 0;
 
     font-size: 18px;
     font-weight: 700;
@@ -100,7 +108,7 @@
   &--heading {
     position: absolute;
     left: 277px;
-    padding-top: 20px;
+    padding-top: 15px;
 
     font-weight: 400;
     line-height: 30px;
@@ -113,23 +121,13 @@
     &::before {
       content: "";
       position: absolute;
-      top: 54%;
-      right: 3%;
-      width: 20px;
-      height: 3px;
-      background-color: #3dc644;
-      transform: rotate(-45deg);
-    }
+      top: 41%;
+      right: 5%;
+      width: 31px;
+      height: 22px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 60%;
-      right: 8%;
-      width: 10px;
-      height: 3px;
-      background-color: #3dc644;
-      transform: rotate(45deg);
+      background-image: url("../img/icon-yes.svg");
+      background-repeat: no-repeat;
     }
   }
 
@@ -137,25 +135,19 @@
     &::before {
       content: "";
       position: absolute;
-      top: 53%;
-      right: 3%;
-      width: 20px;
-      height: 3px;
-      background-color: #f25b26;
-      transform: rotate(-45deg);
-    }
+      top: 25%;
+      right: 6%;
+      width: 27px;
+      height: 27px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 53%;
-      right: 3%;
-      width: 20px;
-      height: 3px;
-      background-color: #f25b26;
-      transform: rotate(45deg);
+      background-image: url("../img/icon-no.svg");
+      background-repeat: no-repeat;
     }
   }
+}
+
+.price__cell-text {
+  margin-left: 27px;
 }
 
 .price__toggles {
@@ -172,7 +164,12 @@
 
 @media (min-width: @tablet-width) {
   .price {
-    padding-bottom: 70px;
+    min-height: 390px;
+    padding-bottom: 0;
+  }
+
+  .price__wrapper {
+    padding-top: 100px;
   }
 
   .price__list {
@@ -185,26 +182,25 @@
 
   .price__cell {
     width: 136px;
-    height: 45px;
-    padding-left: 15px;
+    height: 42px;
 
     &--text {
-      height: 20px;
-      padding-top: 20px;
+      height: 1px;
+      padding-top: 13px;
 
       font-size: 16px;
     }
 
     &--value {
-      height: 23px;
-      padding-bottom: 17px;
+      height: 2px;
+      padding-bottom: 5px;
 
       font-size: 18px;
     }
 
     &--hit {
-      height: 20px;
-      padding-top: 20px;
+      height: 1px;
+      padding-top: 13px;
 
       font-size: 16px;
 
@@ -233,51 +229,21 @@
 
     &--yes {
       &::before {
-        content: "";
-        position: absolute;
-        top: 53%;
-        right: 45%;
-        width: 20px;
-        height: 3px;
-        background-color: #3dc644;
-        transform: rotate(-45deg);
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 60%;
-        right: 54%;
-        width: 10px;
-        height: 3px;
-        background-color: #3dc644;
-        transform: rotate(45deg);
+        top: 35%;
+        left: 44%;
       }
     }
 
     &--no {
       &::before {
-        content: "";
-        position: absolute;
-        top: 53%;
-        right: 48%;
-        width: 20px;
-        height: 3px;
-        background-color: #f25b26;
-        transform: rotate(-45deg);
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 53%;
-        right: 48%;
-        width: 20px;
-        height: 3px;
-        background-color: #f25b26;
-        transform: rotate(45deg);
+        top: 19%;
+        left: 43%;
       }
     }
+  }
+
+  .price__cell-text {
+    margin-left: 12px;
   }
 
   .price__toggles {
